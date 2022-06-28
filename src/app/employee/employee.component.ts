@@ -9,14 +9,14 @@ import { ActivatedRoute } from '@angular/router';
 export class EmployeeComponent implements OnInit {
 
   employeeName:string='';
-  obseverName:any;
+  observerName:any;
   constructor(private route:ActivatedRoute) { }
 
   ngOnInit(): void {
     this.employeeName= this.route.snapshot.params['empName'];
 
     this.route.paramMap.subscribe(params=>{
-      this.obseverName= params.get('empName');
+      this.observerName= params.get('empName');
     });
   }
 
